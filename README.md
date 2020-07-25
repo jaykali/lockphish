@@ -1,7 +1,7 @@
 # Lockphish v2.0
 
 Lockphish it's the first tool (07/04/2020) for phishing attacks on the lock screen, designed to grab Windows credentials, Android PIN and iPhone Passcode using a https link.
-
+## LockPhish Tutorial: https://www.kalilinux.in/2020/05/lockphish.html
 ## Author: https://github.com/kali-linux-tutorial/lockphish
 ## Twitter: https://twitter.com/kalilinux_in
 
