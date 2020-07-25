@@ -1,8 +1,8 @@
-# Hi friends my name is Fasal short name FTM this is my new invention
 #!/bin/bash
 # Lockphish v2.0
-# Coded by: github.com/FAZAL-TM/lockphish 
-# Instagram: @fazal_tm_
+# Coded by: github.com/kali-linux-tutorial/lockphish 
+# Twitter: twitter.com/kalilinux_in
+# https://www.kalilinux.in
 # Read the License before using any part from this code.
 
 trap 'printf "\n";stop' 2
@@ -17,8 +17,8 @@ printf "\e[1;33m / /__| (_) | (__|   <|\e[0m\e[1;77m |_) | | | | \__ \ | | | \e[
 printf "\e[1;33m \____/\___/ \___|_|\_\ \e[0m\e[1;77m.__/|_| |_|_|___/_| |_| By FTM\e[0m\n"
 printf "\e[1;77m                      |_|                  \e[0m\e[1;33mv2.0\e[0m\n"
 
-printf " \n\e[1;77m coded by: github.com/FAZAL-TM/lockphish\e[0m \n"
-printf " \e[1;77mInstagram: @fazal_tm_\e[1;77m\e[0m"
+printf " \n\e[1;77m coded by: github.com/kali-linux-tutorial/lockphish\e[0m \n"
+printf " \e[1;77mTwitter: twitter.com/kalilinux_in\e[1;77m\e[0m"
 printf "\n\n\n\e[1;91m Disclaimer: this tool is designed for security\n"
 printf " testing in an authorized simulated cyberattack\n"
 printf " Attacking targets without prior mutual consent\n"
