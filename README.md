@@ -20,9 +20,11 @@ Usage of Lockphish for attacking targets without prior mutual consent is illegal
 
 ### Usage:
 ```
-https://github.com/kali-linux-tutorial/lockphish
+git clone https://github.com/kali-linux-tutorial/lockphish
 cd lockphish
 bash lockphish.sh
 ```
-
+## Conclusion
+This is a great phishing tool which you use in your android system al well as pc.
+Just install **Termux** and follow the usage command.
 
